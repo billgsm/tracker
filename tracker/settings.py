@@ -122,6 +122,8 @@ INSTALLED_APPS = (
     'ticket',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
+    # Similar to admin but on the client side
+    'django.contrib.databrowse',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
