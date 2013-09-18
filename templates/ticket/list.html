@@ -20,5 +20,13 @@
     <span>Schedule date: {{ elem.schedule_date }}</span>
   {% endautoescape %}
   {% endfor %}
+  <form method='GET' action="">
+    <label>From: </label>
+    <input type="text" name="start" />
+    <label>Until: </label>
+    <input type="text" name="end" />
+    <label>Closed? </label> <input type="checkbox" name="closed" value="true" />
+    <input type="submit" value="filter" />
+  </form>
 </body>
 </html>
