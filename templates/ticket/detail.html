@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Application tracker</title>
+</head>
+<body>
+  <h3>
+  {% if object.closed %}
+    <s>{{ object }}</s>
+  {% else %}
+    {{ object }}
+  {% endif %}
+  </h3>
+  <p>{{ object.description }}</p>
+  {% autoescape off %}
+    <span>Due date: {{ object.colored_due_date }}</span>
+    <span>Schedule date: {{ object.schedule_date }}</span>
+  {% endautoescape %}
+</body>
+</html>
