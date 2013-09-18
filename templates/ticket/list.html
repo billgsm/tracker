@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Application tracker</title>
+</head>
+<body>
+  <h1>Tickets list</h1>
+  {% for elem in objects %}
+  <h3>
+    {% if elem.closed %}
+      <s>{{ elem }}</s>
+    {% else %}
+      {{ elem }}
+    {% endif %}
+  </h3>
+  <p>{{ elem.description }}</p>
+  {% autoescape off %}
+    <span>Due date: {{ elem.colored_due_date }}</span>
+    <span>Schedule date: {{ elem.schedule_date }}</span>
+  {% endautoescape %}
+  {% endfor %}
+</body>
+</html>

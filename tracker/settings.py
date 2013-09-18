@@ -107,7 +107,7 @@ ROOT_URLCONF = 'tracker.urls'
 WSGI_APPLICATION = 'tracker.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    '/home/bilou/Documents/projects/github/tracker/tracker/templates/',
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
