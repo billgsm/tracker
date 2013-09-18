@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here.
+class Task(models.Model):
+  name = models.CharField(max_length=250)
+  description = models.TextField()
+  created_date = models.DateField(auto_now_add=True)
+  due_date = models.DateField()
+  schedule_date = models.DateField()
+  closed = models.BooleanField(default=False)
