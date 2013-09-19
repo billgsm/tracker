@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from django.http import HttpResponse
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 
 from models import Task
 
@@ -26,7 +26,7 @@ def ticket_list(request):
         if 'end' in request.GET and request.GET['end']:
           tickets = tickets.filter(
               due_date__lte=datetime.strptime(request.GET['end'], format))
-  return render_to_response('ticket/list.html', {'objects': tickets})
+  return render(request, 'ticket/list.html', {'objects': tickets})
 
 def ticket_detail(request, id):
   ticket = Task.objects.get(pk=id)
